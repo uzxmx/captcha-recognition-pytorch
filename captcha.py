@@ -63,7 +63,7 @@ class Net(nn.Module):
             nn.BatchNorm2d(512),
             nn.ReLU(),
         )
-        self.fc = nn.Linear(24576, captcha_num * len(avail_chars))
+        self.fc = nn.Linear(20480, captcha_num * len(avail_chars))
 
     def forward(self, x):
         x = self.model(x)
